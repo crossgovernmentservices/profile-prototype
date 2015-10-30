@@ -1,4 +1,6 @@
-# GOV.UK Prototyping Kit
+# Cross-government services Performance Prototype
+
+Built with the [GOV.UK prototype kit](https://github.com/alphagov/govuk_prototype_kit/).
 
 The kit provides a simple way to make interactive prototypes that look like pages on GOV.UK. These prototypes can be used to show ideas to people you work with, and to do user research.
 
