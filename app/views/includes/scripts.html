@@ -8,7 +8,7 @@
 
   function signin() {
     lock.show({
-        callbackURL: '{{ AUTH0_CALLBACK_URL }}'
+        callbackURL: '/callback'
       , responseType: 'code'
       , authParams: {
         scope: 'openid profile'
