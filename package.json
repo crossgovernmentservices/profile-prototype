@@ -1,0 +1,35 @@
+{
+  "name": "performance-prototype",
+  "description": "xgs performance review Express.js prototype",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "4.x"
+  },
+  "dependencies": {
+    "consolidate": "0.x",
+    "cookie-parser": "^1.4.0",
+    "dotenv": "^1.2.0",
+    "express": "4.13.3",
+    "express-session": "^1.12.1",
+    "express-writer": "0.0.4",
+    "govuk_frontend_toolkit": "^4.2.1",
+    "govuk_template_mustache": "^0.15.1",
+    "grunt": "0.4.5",
+    "grunt-cli": "0.1.13",
+    "grunt-concurrent": "0.4.3",
+    "grunt-contrib-clean": "0.5.0",
+    "grunt-contrib-copy": "0.5.0",
+    "grunt-contrib-watch": "0.5.3",
+    "grunt-nodemon": "0.4.0",
+    "grunt-sass": "1.1.0-beta",
+    "grunt-text-replace": "0.3.12",
+    "hogan.js": "3.0.2",
+    "minimist": "0.0.8",
+    "node-sass": "3.3.3",
+    "passport": "^0.3.0",
+    "passport-auth0": "^0.5.0",
+    "readdir": "0.0.6",
+    "serve-favicon": "2.3.0"
+  }
+}
