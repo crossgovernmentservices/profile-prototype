@@ -1,2 +1,3 @@
 .env
+auth0.yml
 production.env
