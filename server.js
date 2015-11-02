@@ -39,8 +39,6 @@ passport.deserializeUser(function(user, done) {
   done(null, user);
 });
 
-console.log(process.env);
-
 // add Auth0 env vars to global context
 app.use(function(req, res, next){
   res.locals.AUTH0_CLIENT_ID = process.env.AUTH0_CLIENT_ID;
