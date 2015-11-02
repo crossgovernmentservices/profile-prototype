@@ -47,7 +47,6 @@ app.use(function(req, res, next){
   next();
 });
 
-
 // Add session and passport middleware
 app.use(cookieParser());
 app.use(session({
@@ -57,6 +56,15 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+
+// add user info to global context if present
+app.use(function(req, res, next){
+  if(req.isAuthenticated()){
+    res.locals.user = req.user._json;
+  }
+  next();
+});
 
 
 // Application settings

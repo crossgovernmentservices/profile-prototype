@@ -44,7 +44,7 @@ router.get('/examples/template-data', function (req, res) {
 });
 
 router.get('/user', function(req, res){
-  res.render('user', {'user': req.user._json});
+  res.render('user');
 });
 
 module.exports = router;
