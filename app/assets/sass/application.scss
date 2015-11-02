@@ -35,3 +35,24 @@
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you,
 // either add and import new partial files, or modify those in GOV.UK elements to fit your user needs.
+strong, b {
+  font-weight: bold;
+}
+
+#login-links {
+  text-align: right;
+  margin-top: 15px;
+
+  li {
+    display: inline-block;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid $grey-1;
+
+    &:last-of-type {
+      border: none;
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+}
