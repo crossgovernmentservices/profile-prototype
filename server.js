@@ -50,7 +50,11 @@ app.use(function(req, res, next){
 
 // Add session and passport middleware
 app.use(cookieParser());
-app.use(session({ secret: 'shhhhhhhhh' }));
+app.use(session({
+  secret: 'secret',
+  resave: false,
+  saveUninitialized: false
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 
