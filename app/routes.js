@@ -44,7 +44,6 @@ router.get('/examples/template-data', function (req, res) {
 });
 
 router.get('/user', function(req, res){
-  console.log(req.user);
   res.render('user', {'user': req.user._json});
 });
 
