@@ -3,7 +3,7 @@ var path = require('path'),
     routes = require(__dirname + '/app/routes.js'),
     favicon = require('serve-favicon'),
     app = express(),
-    port = (process.env.PORT || 3000),
+    port = (process.env.PORT || 2000),
     passport = require('passport'),
     Auth0Strategy = require('passport-auth0'),
     cookieParser = require('cookie-parser'),
@@ -17,9 +17,9 @@ var env = process.env.NODE_ENV || 'development';
 
 // Auth0 setup
 var auth_strategy = new Auth0Strategy({
-    domain:       'xgs.eu.auth0.com',
-    clientID:     '85tRVeT4eU53Vn6NXy6TF8Pz4M31PWOh',
-    clientSecret: 'ikNBTBWFBQ42jJvsFDfne-6bPgMfMZdL7qyoLMN7nE1MqqSmnZSGM3oYzgvbchn-',
+    domain:       process.env.AUTH0_DOMAIN,
+    clientID:     process.env.AUTH0_CLIENT_ID,
+    clientSecret: process.env.AUTH0_CLIENT_SECRET,
     callbackURL:  '/callback'
   }, function(accessToken, refreshToken, extraParams, profile, done) {
     // accessToken is the token to call Auth0 API (not needed in the most cases)
@@ -39,11 +39,10 @@ passport.deserializeUser(function(user, done) {
   done(null, user);
 });
 
-// add Auth0 env vars to global context
+// add current URL to global context
 app.use(function(req, res, next){
-  res.locals.AUTH0_CLIENT_ID = process.env.AUTH0_CLIENT_ID;
-  res.locals.AUTH0_DOMAIN = process.env.AUTH0_DOMAIN;
-  res.locals.AUTH0_CALLBACK_URL = process.env.AUTH0_CALLBACK_URL;
+  res.locals.current_url = req.protocol + '://' + req.get('host') +
+    req.originalUrl;
   next();
 });
 
