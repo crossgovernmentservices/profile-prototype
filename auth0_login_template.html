@@ -56,6 +56,46 @@
     <meta property="og:image" content="//x-gov-performance-prototype.herokuapp.com/public/images/opengraph-image.png?0.15.1">
 
   <link href="//x-gov-performance-prototype.herokuapp.com/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+      body #a0-lock .a0-panel {
+        width: auto;
+      }
+
+      body #a0-lock.a0-theme-default .a0-panel * {
+        font-family: "nta", Arial, sans-serif !important;
+      }
+
+      body #a0-lock.a0-theme-default .a0-zocial span, #a0-lock.a0-theme-default a.a0-zocial span {
+        font-size: 16px;
+        text-transform: none;
+      }
+
+      body #a0-lock a, body #a0-lock button, body #a0-lock footer, body #a0-lock form, body #a0-lock form label, body #a0-lock h1, body #a0-lock h2, body #a0-lock h3, body #a0-lock header, body #a0-lock input[type=button], body #a0-lock input[type=email], body #a0-lock input[type=password], body #a0-lock input[type=text], body #a0-lock span {
+        font-family:  "nta", Arial, sans-serif !important;
+        font-size: 16px;
+        text-transform: none;
+      }
+
+      body #a0-lock.a0-theme-default .a0-zocial, #a0-lock.a0-theme-default a.a0-zocial {
+        width: 45%;
+        margin-left: 15px;
+        display: inline-block;
+      }
+
+      body .a0-iconlist {
+        text-align: left;
+      }
+
+      body #a0-lock.a0-theme-default .a0-panel {
+        box-shadow: none;
+      }
+
+      body #a0-lock.a0-theme-default .a0-panel .a0-footer {
+        display: none;
+      }
+    </style>
+
   </head>
 
   <body class="">
@@ -149,6 +189,21 @@
   <script src="//x-gov-performance-prototype.herokuapp.com/public/javascripts/jquery-1.11.3.js"></script>
   <script src="//x-gov-performance-prototype.herokuapp.com/public/javascripts/application.js"></script>
   <script src="//cdn.auth0.com/js/lock-7.9.min.js"></script>
+  <!--script type="text/javascript">
+
+    var lock = new Auth0Lock('85tRVeT4eU53Vn6NXy6TF8Pz4M31PWOh', 'xgs.eu.auth0.com');
+
+    function signin() {
+      lock.show({
+          callbackURL: 'http://x-gov-performance-prototype.herokuapp.com/callback'
+        , responseType: 'code'
+        , authParams: {
+          scope: 'openid profile'
+        }
+      });
+    }
+  </script-->
+
   <script>
     // Decode utf8 characters properly
     var config = JSON.parse(decodeURIComponent(escape(window.atob('@@config@@'))));
