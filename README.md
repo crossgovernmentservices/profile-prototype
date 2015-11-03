@@ -1,4 +1,4 @@
-# Cross-government services Performance Prototype
+# Cross-government services Profile Prototype
 
 Built with the [GOV.UK prototype kit](https://github.com/alphagov/govuk_prototype_kit/).
 
