@@ -21,6 +21,10 @@ router.get('/callback',
     res.redirect(req.query.state || "/");
   });
 
+router.get('/', function (req, res) {
+  res.render('index');
+});
+
 // middleware to redirect to login if not authenticated
 // routes defined before this middleware do not require authentication
 // routes defined after *do* require authentication
